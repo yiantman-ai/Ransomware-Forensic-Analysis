@@ -385,7 +385,7 @@ This documentation is shared for educational and training purposes only.
 ## 👤 Author
 
 **Forensic Analyst:** Jesse Antman  
-**GitHub:** [Your GitHub Profile]  
+**GitHub:** https://github.com/yiantman-ai  
 **Email:** yi.Antman@gmail.com  
 **Repository:** [This Repository]
 

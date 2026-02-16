@@ -4,7 +4,7 @@
 
 Case ID: RANSOMWARE_21a34484
 Date: February 15, 2026
-Examiner: [Your Name]
+Examiner: Jesse Antman
 
 VICTIM DETAILS:
 - Victim ID: 21a34484
