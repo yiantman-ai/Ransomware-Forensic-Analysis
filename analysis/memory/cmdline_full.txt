@@ -1,0 +1,125 @@
+Volatility 3 Framework 2.28.0
+
+PID	Process	Args
+
+4	System	-
+92	Registry	-
+324	smss.exe	-
+440	csrss.exe	-
+516	wininit.exe	-
+524	csrss.exe	-
+588	winlogon.exe	-
+660	services.exe	C:\Windows\system32\services.exe
+684	lsass.exe	C:\Windows\system32\lsass.exe
+784	svchost.exe	C:\Windows\system32\svchost.exe -k DcomLaunch -p
+792	fontdrvhost.ex	-
+800	fontdrvhost.ex	-
+900	svchost.exe	C:\Windows\system32\svchost.exe -k RPCSS -p
+1016	dwm.exe	-
+368	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+376	svchost.exe	C:\Windows\system32\svchost.exe -k netsvcs -p
+756	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+1068	svchost.exe	-
+1132	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNoNetwork -p
+1168	svchost.exe	C:\Windows\system32\svchost.exe -k LocalService -p
+1392	MemCompression	-
+1468	svchost.exe	C:\Windows\System32\svchost.exe -k NetworkService -p
+1628	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+1748	svchost.exe	C:\Windows\system32\svchost.exe -k appmodel -p
+1772	svchost.exe	-
+1796	svchost.exe	-
+1812	svchost.exe	C:\Windows\System32\svchost.exe -k NetworkService -p
+1848	svchost.exe	C:\Windows\system32\svchost.exe -k LocalServiceNoNetworkFirewall -p
+1936	svchost.exe	-
+412	spoolsv.exe	-
+2324	WmiPrvSE.exe	C:\Windows\system32\wbem\wmiprvse.exe
+2448	svchost.exe	-
+2532	svchost.exe	C:\Windows\System32\svchost.exe -k LocalSystemNetworkRestricted -p
+2604	VGAuthService.	-
+2616	vm3dservice.ex	-
+2632	vmtoolsd.exe	੄၄䑁䒈䄐草ࣁ䅦䦃Ǽ事蔌瓉䡠ᚋ譄ࡆ襈䗐삅ᱴ赎씔
+2640	MpDefenderCore	-
+2668	MsMpEng.exe	-
+2720	Sysmon64.exe	C:\Windows\Sysmon64.exe
+2860	vm3dservice.ex	-
+2208	unsecapp.exe	C:\Windows\system32\wbem\unsecapp.exe -Embedding
+3328	dllhost.exe	-
+3732	dllhost.exe	-
+3256	msdtc.exe	-
+2788	SearchIndexer.	C:\Windows\system32\SearchIndexer.exe /Embedding
+4524	sihost.exe	-
+4548	svchost.exe	C:\Windows\system32\svchost.exe -k UnistackSvcGroup
+4624	taskhostw.exe	-
+4676	taskhostw.exe	taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}
+4920	AggregatorHost	-
+4188	userinit.exe	-
+3020	explorer.exe	C:\Windows\Explorer.EXE
+4276	svchost.exe	-
+2584	svchost.exe	C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p
+5720	StartMenuExper	-
+6088	RuntimeBroker.	-
+6148	SearchApp.exe	-
+6252	RuntimeBroker.	C:\Windows\System32\RuntimeBroker.exe -Embedding
+6460	ShellExperienc	-
+6788	ctfmon.exe	"ctfmon.exe"
+6812	TabTip.exe	-
+6988	RuntimeBroker.	-
+5304	SecurityHealth	-
+5476	SecurityHealth	-
+2868	vmtoolsd.exe	"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr
+5548	msedge.exe	-
+5204	OneDrive.exe	"C:\Users\Windows10\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+2268	OneDrive.Sync.	-
+3108	msedge.exe	"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start
+7108	msedge.exe	-
+4652	msedge.exe	-
+6632	msedge.exe	-
+2180	msedge.exe	-
+5848	TextInputHost.	"C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe" -ServerName:InputApp.AppXk0k6mrh4r2q0ct33a9wgbez0x7v9cz5y.mca
+3076	ApplicationFra	-
+4244	dllhost.exe	-
+5408	svchost.exe	C:\Windows\system32\svchost.exe -k WbioSvcGroup
+6664	svchost.exe	C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted -p
+2792	WinStore.App.e	-
+2088	RuntimeBroker.	-
+7428	RuntimeBroker.	-
+1860	SystemSettings	-
+4856	UserOOBEBroker	-
+7720	FileCoAuth.exe	-
+8040	promecefplugin	-
+552	OneDrive.Sync.	-
+5556	dllhost.exe	-
+5468	chrome.exe	-
+7508	chrome.exe	-
+6960	SearchApp.exe	-
+1724	msedgewebview2	-
+8088	msedgewebview2	-
+2488	msedgewebview2	-
+6264	msedgewebview2	-
+4412	msedgewebview2	-
+6564	msedgewebview2	-
+5060	chrome.exe	"C:\Program Files\Google\Chrome\Application\chrome.exe" 
+4448	chrome.exe	-
+5676	chrome.exe	-
+7784	chrome.exe	-
+7824	chrome.exe	-
+7600	chrome.exe	-
+2908	powershell.exe	-
+1496	conhost.exe	-
+7716	winupdate10957	-
+4012	winupdate10957	-
+3728	powershell.exe	"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" 
+7696	conhost.exe	\??\C:\Windows\system32\conhost.exe 0x4
+2336	svchost.exe	-
+3712	svchost.exe	-
+3720	SecHealthUI.ex	-
+3388	SecurityHealth	-
+2416	schtasks.exe	-
+2264	TabTip.exe	-
+4032	powershell.exe	-
+4256	conhost.exe	-
+3008	chrome.exe	-
+5012	chrome.exe	-
+6304	svchost.exe	-
+7544	chrome.exe	-
+972	go-winpmem_amd	"C:\Forensics\go-winpmem_amd64_1.0-rc2_signed.exe" acquire C:\Evidence\memory_dump.raw
