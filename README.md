@@ -8,7 +8,7 @@
 
 **Complete digital forensic investigation: Ransomware attack analysis with Network, Memory, and Log forensics**
 
-🎓 **Educational Project** | 🔒 **For Training Only** | 🔍 **Full Analysis Included**
+**Educational Project** | **For Training Only** | **Full Analysis Included**
 
 ---
 # Ransomware Forensic Analysis Project
