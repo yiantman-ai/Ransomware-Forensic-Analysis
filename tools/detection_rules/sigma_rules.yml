@@ -1,0 +1,138 @@
+# Sigma Rules for Ransomware Detection
+# Case: RANSOMWARE_21a34484
+
+# ============================================================
+# Process Creation Rules
+# ============================================================
+
+title: Suspicious PowerShell with IEX and DownloadString
+id: 21a34484-0001-4872-a001-ransomware001
+status: stable
+description: Detects PowerShell execution with IEX and DownloadString (malware download)
+references:
+    - https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
+author: Jesse Antman
+date: 2026/02/15
+tags:
+    - attack.execution
+    - attack.t1059.001
+    - attack.defense_evasion
+    - attack.t1140
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\powershell.exe'
+        CommandLine|contains|all:
+            - 'IEX'
+            - 'DownloadString'
+            - 'New-Object'
+            - 'Net.WebClient'
+    condition: selection
+falsepositives:
+    - Legitimate software deployment scripts
+level: critical
+
+---
+
+title: Ransomware Execution from TEMP Directory
+id: 21a34484-0002-7716-a002-ransomware002
+status: stable
+description: Detects execution of suspicious executable from TEMP with Windows Update naming
+references:
+    - https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
+author: Jesse Antman
+date: 2026/02/15
+tags:
+    - attack.execution
+    - attack.defense_evasion
+    - attack.t1036.005
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|contains: '\AppData\Local\Temp\'
+        Image|contains: 'winupdate'
+        Image|endswith: '.exe'
+    condition: selection
+falsepositives:
+    - Legitimate Windows Update processes (rare)
+level: high
+
+---
+
+title: Registry Persistence - WindowsSecurityUpdate
+id: 21a34484-0003-reg1-a003-ransomware003
+status: stable
+description: Detects creation of suspicious Run key for persistence
+references:
+    - https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
+author: Jesse Antman
+date: 2026/02/15
+tags:
+    - attack.persistence
+    - attack.t1547.001
+logsource:
+    category: registry_event
+    product: windows
+detection:
+    selection:
+        TargetObject|contains: '\Software\Microsoft\Windows\CurrentVersion\Run\WindowsSecurityUpdate'
+        EventType: 'SetValue'
+    condition: selection
+falsepositives:
+    - None expected
+level: critical
+
+---
+
+title: Mass File Encryption Activity
+id: 21a34484-0004-file-a004-ransomware004
+status: stable
+description: Detects rapid creation of .locked files (ransomware encryption)
+references:
+    - https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
+author: Jesse Antman
+date: 2026/02/15
+tags:
+    - attack.impact
+    - attack.t1486
+logsource:
+    category: file_event
+    product: windows
+detection:
+    selection:
+        TargetFilename|endswith: '.locked'
+    timeframe: 60s
+    condition: selection | count() > 10
+falsepositives:
+    - None expected
+level: critical
+
+---
+
+title: Scheduled Task Persistence - MicrosoftEdgeUpdate
+id: 21a34484-0005-task-a005-ransomware005
+status: stable
+description: Detects creation of suspicious scheduled task for persistence
+references:
+    - https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
+author: Jesse Antman
+date: 2026/02/15
+tags:
+    - attack.persistence
+    - attack.t1053.005
+logsource:
+    product: windows
+    service: security
+    definition: 'Requirements: Audit Scheduled Task Creation'
+detection:
+    selection:
+        EventID: 4698
+        TaskName|contains: 'MicrosoftEdgeUpdate'
+    condition: selection
+falsepositives:
+    - Legitimate Edge updates (validate task XML)
+level: high
