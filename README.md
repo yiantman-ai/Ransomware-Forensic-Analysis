@@ -1,5 +1,18 @@
 # Ransomware Forensic Analysis Project
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Volatility 3](https://img.shields.io/badge/Volatility-3.28.0-red.svg)](https://github.com/volatilityfoundation/volatility3)
+[![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-orange.svg)](https://attack.mitre.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/yiantman-ai/Ransomware-Forensic-Analysis/graphs/commit-activity)
+
+**Complete digital forensic investigation: Ransomware attack analysis with Network, Memory, and Log forensics**
+
+🎓 **Educational Project** | 🔒 **For Training Only** | 🔍 **Full Analysis Included**
+
+---
+# Ransomware Forensic Analysis Project
+
 **Case ID:** RANSOMWARE_21a34484  
 **Investigation Date:** February 2026  
 **Status:** Complete  

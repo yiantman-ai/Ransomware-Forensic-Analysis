@@ -1,0 +1,28 @@
+# Core Dependencies
+cryptography>=41.0.0
+requests>=2.31.0
+
+# Forensic Tools
+volatility3>=2.5.0
+
+# Log Analysis
+python-evtx>=0.7.0
+
+# Visualization
+matplotlib>=3.7.0
+numpy>=1.24.0
+
+# Optional: Network Analysis
+scapy>=2.5.0
+
+# Optional: YARA
+yara-python>=4.3.0
+
+# Development
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Documentation
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
