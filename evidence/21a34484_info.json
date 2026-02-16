@@ -1,0 +1,97 @@
+{
+  "victim_id": "21a34484",
+  "hostname": "DESKTOP-7URDO6U",
+  "os": "Windows",
+  "os_version": "10.0.19045",
+  "os_release": "10",
+  "architecture": "AMD64",
+  "processor": "Intel64 Family 6 Model 126 Stepping 5, GenuineIntel",
+  "username": "Windows10",
+  "computer_name": "DESKTOP-7URDO6U",
+  "user_domain": "DESKTOP-7URDO6U",
+  "local_ip": "192.168.74.157",
+  "timestamp": "2026-02-15T14:50:54.200440",
+  "is_vm": true,
+  "is_debugged": false,
+  "installed_software_count": 7,
+  "chrome_passwords": [],
+  "firefox_passwords": [],
+  "chrome_history": [
+    {
+      "url": "http://192.168.74.147:8080/",
+      "title": "Facebok - log in or sign up",
+      "visit_count": 4
+    },
+    {
+      "url": "file:///C:/Users/Windows10/Documents/Work_Projects/HR_Documents/Employee_Handbook.pdf",
+      "title": "untitled",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.g2a.com/microsoft-office-professional-plus-2021-pc-microsoft-key-global-i10000271538001?adid=AFI_GLOBAL_PB_DIGI_NGAM_DISPLAY_MIX_SOFTONIC&gname=office2021sft&id=1613&utm_campaign=AFI_GLOBAL_PB_DIGI_NGAM_DISPLAY_MIX_SOFTONIC&utm_medium=affiliate_websites&utm_source=SOFTONIC",
+      "title": "Buy\u00a0Microsoft Office Professional Plus 2021 (PC) Microsoft Key",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.google.com/aclk?sa=L&pf=1&ai=DChsSEwi48OOo_dmSAxVzp4MHHXRYDR4YACICCAEQABoCZWY&co=1&ase=2&gclid=EAIaIQobChMIuPDjqP3ZkgMVc6eDBx10WA0eEAAYASAAEgLXIfD_BwE&cid=CAASugHkaDuDRweNWE7RmoylFkDr0MMtmofcPxgipoirRs3hpn5FSjkSFRmUNP-S87n1LDDYNqVBEomCximVuLDq3xIlNi2JSHNmc6dzrGtqCdi3gOqtHOMfB6qx1mX9QE7UBFbZgbVfBdvOqVwjXxgbsdTOcXB8RSK0Zk4O4ZvPXxlt0XkehrNuhTbue6TGy8f55I9JRv53-YUbnZ4KsC5oZZPIBmTW-d1ufjVw3DSJ_CESKH2ZtRF2JEn482g&cce=2&category=acrcp_v1_32&sig=AOD64_0qFtVeEg7bYIhR0itbjKEzbaktTw&q&nis=6&ch=1&adurl=https://wps.com/ad/office/?gad_source%3D1%26gad_campaignid%3D20760686351%26gbraid%3D0AAAAAphFvSgUgBaWhm21c1d4OddTFMzsp%26gclid%3DEAIaIQobChMIuPDjqP3ZkgMVc6eDBx10WA0eEAAYASAAEgLXIfD_BwE&ved=2ahUKEwis0N6o_dmSAxV17QIHHV-AC5UQ0Qx6BAgMEAE",
+      "title": "WPS Office - Free Office Download for PC & Mobile, Alternative to MS Office",
+      "visit_count": 1
+    },
+    {
+      "url": "https://wps.com/ad/office/?gad_source=1&gad_campaignid=20760686351&gbraid=0AAAAAphFvSgUgBaWhm21c1d4OddTFMzsp&gclid=EAIaIQobChMIuPDjqP3ZkgMVc6eDBx10WA0eEAAYASAAEgLXIfD_BwE",
+      "title": "WPS Office - Free Office Download for PC & Mobile, Alternative to MS Office",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.wps.com/ad/office/?gad_source=1&gad_campaignid=20760686351&gbraid=0AAAAAphFvSgUgBaWhm21c1d4OddTFMzsp&gclid=EAIaIQobChMIuPDjqP3ZkgMVc6eDBx10WA0eEAAYASAAEgLXIfD_BwE",
+      "title": "WPS Office - Free Office Download for PC & Mobile, Alternative to MS Office",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.google.com/search?q=word+free+download&oq=word+free&gs_lcrp=EgZjaHJvbWUqDAgBEAAYQxiABBiKBTIOCAAQRRg5GEMYgAQYigUyDAgBEAAYQxiABBiKBTIMCAIQABhDGIAEGIoFMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEJMTA5NjNqMGo0qAIAsAIB&sourceid=chrome&ie=UTF-8",
+      "title": "word free download - Google Search",
+      "visit_count": 2
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web",
+      "title": "Free Microsoft 365 Online | Word, Excel, PowerPoint",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.g2a.com/n/office2021sft?adid=AFI_GLOBAL_PB_DIGI_NGAM_DISPLAY_MIX_SOFTONIC&gtag=40e14661e6&id=1613&utm_source=SOFTONIC&utm_medium=affiliate_websites&utm_campaign=AFI_GLOBAL_PB_DIGI_NGAM_DISPLAY_MIX_SOFTONIC",
+      "title": "Buy\u00a0Microsoft Office Professional Plus 2021 (PC) Microsoft Key",
+      "visit_count": 1
+    },
+    {
+      "url": "https://en.softonic.com/download/microsoft-word/windows/post-download?dt=affiliateDownload",
+      "title": "\u2705 Downloading",
+      "visit_count": 1
+    },
+    {
+      "url": "https://microsoft-word.en.softonic.com/#google_vignette",
+      "title": "\u2705 Downloading",
+      "visit_count": 1
+    },
+    {
+      "url": "https://microsoft-word.en.softonic.com/",
+      "title": "Microsoft Word - Download",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.google.com/search?q=word&oq=word&gs_lcrp=EgZjaHJvbWUyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDAgCEEUYORixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIKCAUQABixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABDIHCAkQABiABNIBCDM4ODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&sei=le-Qadf1PPmmi-gP7_2B8AE",
+      "title": "word - Google Search",
+      "visit_count": 1
+    },
+    {
+      "url": "https://www.google.com/search?q=word&oq=word&gs_lcrp=EgZjaHJvbWUyEAgAEAAYgwEY4wIYsQMYgAQyDQgBEC4YgwEYsQMYgAQyDAgCEEUYORixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIKCAUQABixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABDIHCAkQABiABNIBCDM4ODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+      "title": "word - Google Search",
+      "visit_count": 1
+    },
+    {
+      "url": "file:///C:/Users/Windows10/Documents/TestDocs/Document_1.pdf",
+      "title": "untitled",
+      "visit_count": 1
+    }
+  ],
+  "encryption_key": "9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw="
+}

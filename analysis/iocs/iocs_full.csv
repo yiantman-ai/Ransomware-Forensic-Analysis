@@ -1,0 +1,25 @@
+Type,Value,Description,Source,Confidence
+IP,192.168.74.147,C2 Server,PCAP + Sysmon,High
+Port,8080,C2 Communication Port,PCAP + Sysmon,High
+URL,http://192.168.74.147:8080/,Phishing Page,PCAP + Browser History,High
+URL,http://192.168.74.147:8080/loader.ps1,PowerShell Loader,PCAP + Sysmon,High
+URL,http://192.168.74.147:8080/config.dat,Encoded Payload,PCAP,High
+URL,http://192.168.74.147:8080/register,C2 Registration Endpoint,PCAP + C2 Logs,High
+URL,http://192.168.74.147:8080/exfiltrate,Data Exfiltration Endpoint,PCAP + C2 Logs,High
+File Path,C:\Users\Windows10\AppData\Local\Temp\winupdate*.exe,Malware Location,Sysmon + Memory,High
+File Name,winupdate1095726858.exe,Malware Executable,Sysmon Event 1,High
+File Extension,.locked,Encrypted Files,File System,High
+Registry Key,HKCU\Software\Microsoft\Windows\CurrentVersion\Run\WindowsSecurityUpdate,Persistence,Registry Export,High
+Scheduled Task,MicrosoftEdgeUpdate,Persistence Mechanism,Scheduled Tasks Export,High
+Process Name,powershell.exe,Malicious Execution,Sysmon + Memory,Medium
+Command Line,IEX(New-Object Net.WebClient).DownloadString,PowerShell Download Pattern,Sysmon Event 1,High
+PID,4872,Malicious PowerShell Process,Sysmon + Memory,High
+PID,7716,Primary Malware Process,Sysmon + Memory,High
+PID,4012,Secondary Malware Process,Sysmon + Memory,High
+Victim ID,21a34484,Unique Victim Identifier,C2 Data,High
+Encryption Key,9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw=,AES-256 Fernet Key,C2 Exfiltrated Data,Critical
+User-Agent,Mozilla/5.0 (Windows NT 10.0; Win64; x64),Browser Fingerprint,PCAP,Low
+Hostname,DESKTOP-7URDO6U,Compromised System,C2 Registration,Medium
+Username,Windows10,Victim User Account,C2 Registration,Medium
+SHA256,bbddae76c5d688f8325eb5227bc259e87033e8233aeb032291f8e01f80e72079,Memory Dump Hash,Evidence Hash,High
+SHA256,174d6a5d08dcabb1295002fb99fcac68fcab47064c40e0ca6943c9ef3661338e,PCAP File Hash,Evidence Hash,High

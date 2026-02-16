@@ -1,0 +1,40 @@
+╔══════════════════════════════════════════════════════════════╗
+║              RANSOMWARE FORENSIC CASE                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+Case ID: RANSOMWARE_21a34484
+Date: February 15, 2026
+Examiner: [Your Name]
+
+VICTIM DETAILS:
+- Victim ID: 21a34484
+- IP Address: 192.168.74.157
+- Encryption Key: 9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw=
+
+C2 SERVER:
+- IP Address: 192.168.74.147:8080
+- Protocol: HTTP
+
+FILES ENCRYPTED:
+- Total: 37 files
+- Extensions: .pdf, .docx, .xlsx, .txt, .jpg
+- New Extension: .locked
+
+EVIDENCE COLLECTED:
+- Memory Dump: 2.0GB (Verified)
+- PCAP: 19MB
+- Sysmon Logs: 17MB
+- Event Logs: Security (12MB), System (1.1MB)
+- Registry Hives: Complete set
+- C2 Logs: Complete
+
+ANALYSIS STATUS:
+[ ] Network Analysis
+[ ] Memory Analysis  
+[ ] Log Analysis
+[ ] Timeline Creation
+[ ] MITRE ATT&CK Mapping
+[ ] IOC Extraction
+[ ] Final Report
+
+═══════════════════════════════════════════════════════════════

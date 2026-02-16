@@ -1,0 +1,89 @@
+╔══════════════════════════════════════════════════════════════╗
+║              RANSOMWARE ATTACK FLOW                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+T+0:00 (12:49:38)
+┌────────────────────────────────────────┐
+│  USER OPENS PHISHING PAGE             │
+│  http://192.168.74.147:8080/           │
+│  Fake Facebook login                   │
+└────────────────────────────────────────┘
+              ↓
+T+0:17 (12:49:55)
+┌────────────────────────────────────────┐
+│  POWERSHELL OPENS                      │
+│  PID: 2908                             │
+│  User interaction with page            │
+└────────────────────────────────────────┘
+              ↓
+T+1:13 (12:50:51) ← CRITICAL MOMENT
+┌────────────────────────────────────────┐
+│  MALICIOUS POWERSHELL EXECUTION        │
+│  PID: 4872                             │
+│  Command: Download & Execute loader.ps1│
+└────────────────────────────────────────┘
+              ↓
+         [DOWNLOADS]
+              ↓
+┌─────────────┴──────────────┐
+│ loader.ps1 (868 bytes)     │  config.dat (18.6MB)
+│ PowerShell script          │  Base64-encoded EXE
+└────────────────────────────┘
+              ↓
+T+1:13 (12:50:51)
+┌────────────────────────────────────────┐
+│  RANSOMWARE EXECUTION                  │
+│  winupdate1095726858.exe               │
+│  PID: 7716                             │
+│  Path: C:\Users\...\Temp\              │
+└────────────────────────────────────────┘
+              ↓
+T+1:14 (12:50:52) [+1 second]
+┌────────────────────────────────────────┐
+│  CHILD PROCESS SPAWNED                 │
+│  PID: 4012                             │
+│  Handles C2 & Encryption               │
+└────────────────────────────────────────┘
+              ↓
+T+1:18 (12:50:56) [+5 seconds]
+┌────────────────────────────────────────┐
+│  C2 REGISTRATION                       │
+│  POST /register                        │
+│  ▸ Hostname: DESKTOP-7URDO6U           │
+│  ▸ User: Windows10                     │
+│  ▸ Encryption Key: 9Wf1-APAw...        │
+│  ▸ Chrome passwords (attempted)        │
+│  ▸ Browser history (stolen)            │
+└────────────────────────────────────────┘
+              ↓
+      [ENCRYPTION PROCESS]
+      37 files encrypted
+      .locked extension added
+              ↓
+T+1:28 (12:51:06) [+16 seconds total]
+┌────────────────────────────────────────┐
+│  DATA EXFILTRATION                     │
+│  POST /exfiltrate                      │
+│  ▸ List of 37 encrypted files          │
+│  ▸ File paths & metadata               │
+└────────────────────────────────────────┘
+              ↓
+T+1:xx (12:51:xx)
+┌────────────────────────────────────────┐
+│  RANSOM NOTE DROPPED                   │
+│  Desktop\README_DECRYPT.txt            │
+│  Popup displayed to user               │
+└────────────────────────────────────────┘
+              ↓
+T+1:09 (12:51:47)
+┌────────────────────────────────────────┐
+│  PERSISTENCE (suspected)               │
+│  PowerShell PID: 3728                  │
+│  Registry/Scheduled Task creation      │
+└────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════╗
+║  TOTAL ATTACK TIME: ~90 SECONDS (Download to Exfiltration)  ║
+║  IMPACT: 37 FILES ENCRYPTED                                  ║
+║  DATA STOLEN: System info, Encryption key, Browser history   ║
+╚══════════════════════════════════════════════════════════════╝

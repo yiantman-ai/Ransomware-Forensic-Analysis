@@ -1,0 +1,33 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║           RANSOMWARE ATTACK - FORENSIC EVIDENCE              ║
+╚══════════════════════════════════════════════════════════════╝
+
+Attack Date: Sun Feb 15 08:01:45 AM EST 2026
+Evidence Collection: /home/kali/forensics_evidence/attack_final_20260215_074042
+
+VICTIM INFORMATION:
+- Hostname: WINDOWS10-PC
+- IP: 192.168.74.157
+- User: Windows10
+
+C2 SERVER:
+- IP: 192.168.74.147:8080
+- Logs: 1 files
+
+FILES ENCRYPTED:
+- Total:  files
+- Types: PDF, DOCX, XLSX, TXT, JPG
+
+EVIDENCE COLLECTED:
+- PCAP: pcap/attack_full.pcap
+- C2 Logs: 2 files
+- Exfiltrated Data: 1 files
+- Encryption Keys: 1 files
+- Screenshots: 0 files
+
+NEXT STEPS:
+1. Memory dump (WinPMEM)
+2. Disk imaging (FTK Imager)
+3. Sysmon log export
+4. Timeline analysis

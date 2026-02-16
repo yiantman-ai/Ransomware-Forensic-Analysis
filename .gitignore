@@ -1,0 +1,23 @@
+# Large binary files (don't upload to GitHub)
+*.raw
+*.pcap
+*.evtx
+*.hive
+*.dmp
+*.zip
+
+# Keep structure but ignore large evidence files
+windows_evidence/memory_dump_final.raw
+windows_evidence/Artifacts_Final.zip
+windows_evidence/extracted_artifacts/*.evtx
+windows_evidence/extracted_artifacts/*.hive
+pcap/attack_full.pcap
+
+# But keep small analysis files
+!analysis/
+!reports/
+!timeline/
+!*.txt
+!*.md
+!*.csv
+!*.json

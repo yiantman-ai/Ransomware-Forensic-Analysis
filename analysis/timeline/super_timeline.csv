@@ -1,0 +1,17 @@
+Timestamp,Source,Event Type,Details,Evidence
+2026-02-15 12:49:38,PCAP,HTTP GET,User accesses phishing page http://192.168.74.147:8080/,Chrome (PID 5676)
+2026-02-15 12:49:55,Memory,Process Create,PowerShell opens (first instance),PID 2908
+2026-02-15 12:50:51,Sysmon,Process Create,PowerShell executes malicious command,PID 4872 - Downloads loader.ps1
+2026-02-15 12:50:51,PCAP,HTTP GET,loader.ps1 downloaded (868 bytes),192.168.74.157 → 192.168.74.147:8080
+2026-02-15 12:50:51,PCAP,HTTP GET,config.dat downloaded (18.6MB encoded payload),192.168.74.157 → 192.168.74.147:8080
+2026-02-15 12:50:51,Sysmon,Process Create,Malware execution begins,PID 7716 - winupdate1095726858.exe
+2026-02-15 12:50:52,Sysmon,Process Create,Child process spawned,PID 4012 - winupdate1095726858.exe
+2026-02-15 12:50:56,Sysmon,Network Connect,C2 Registration connection,PID 4012 → 192.168.74.147:8080
+2026-02-15 12:50:56,PCAP,HTTP POST,POST /register - System info + Encryption key,Victim ID: 21a34484
+2026-02-15 12:51:06,Sysmon,Network Connect,Data Exfiltration connection,PID 4012 → 192.168.74.147:8080
+2026-02-15 12:51:06,PCAP,HTTP POST,POST /exfiltrate - List of 37 encrypted files,37 files with .locked extension
+2026-02-15 12:51:06,C2 Data,Data Received,Encryption key stored on C2,Key: 9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw=
+2026-02-15 12:51:06,C2 Data,Data Received,File list with 37 encrypted files,All PDFs DOCX XLSX TXT JPG
+2026-02-15 12:51:xx,File System,File Create,README_DECRYPT.txt created on Desktop,Ransom note
+2026-02-15 12:51:47,Memory,Process Create,PowerShell opens (persistence?),PID 3728
+2026-02-15 14:10:04,Memory,Memory Capture,Memory dump acquired,2.0GB - Processes preserved

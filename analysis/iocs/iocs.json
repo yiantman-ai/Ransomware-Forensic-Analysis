@@ -1,0 +1,156 @@
+{
+  "network": [
+    {
+      "type": "IP",
+      "value": "192.168.74.147",
+      "description": "C2 Server",
+      "confidence": "High"
+    },
+    {
+      "type": "Port",
+      "value": "8080",
+      "description": "C2 Communication Port",
+      "confidence": "High"
+    },
+    {
+      "type": "URL",
+      "value": "http://192.168.74.147:8080/",
+      "description": "Phishing Page",
+      "confidence": "High"
+    },
+    {
+      "type": "URL",
+      "value": "http://192.168.74.147:8080/loader.ps1",
+      "description": "PowerShell Loader",
+      "confidence": "High"
+    },
+    {
+      "type": "URL",
+      "value": "http://192.168.74.147:8080/config.dat",
+      "description": "Encoded Payload",
+      "confidence": "High"
+    },
+    {
+      "type": "URL",
+      "value": "http://192.168.74.147:8080/register",
+      "description": "C2 Registration Endpoint",
+      "confidence": "High"
+    },
+    {
+      "type": "URL",
+      "value": "http://192.168.74.147:8080/exfiltrate",
+      "description": "Data Exfiltration Endpoint",
+      "confidence": "High"
+    }
+  ],
+  "files": [
+    {
+      "type": "File Path",
+      "value": "C:\\Users\\Windows10\\AppData\\Local\\Temp\\winupdate*.exe",
+      "description": "Malware Location",
+      "confidence": "High"
+    },
+    {
+      "type": "File Name",
+      "value": "winupdate1095726858.exe",
+      "description": "Malware Executable",
+      "confidence": "High"
+    },
+    {
+      "type": "File Extension",
+      "value": ".locked",
+      "description": "Encrypted Files",
+      "confidence": "High"
+    },
+    {
+      "type": "SHA256",
+      "value": "bbddae76c5d688f8325eb5227bc259e87033e8233aeb032291f8e01f80e72079",
+      "description": "Memory Dump Hash",
+      "confidence": "High"
+    },
+    {
+      "type": "SHA256",
+      "value": "174d6a5d08dcabb1295002fb99fcac68fcab47064c40e0ca6943c9ef3661338e",
+      "description": "PCAP File Hash",
+      "confidence": "High"
+    }
+  ],
+  "registry": [
+    {
+      "type": "Registry Key",
+      "value": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\WindowsSecurityUpdate",
+      "description": "Persistence",
+      "confidence": "High"
+    },
+    {
+      "type": "Scheduled Task",
+      "value": "MicrosoftEdgeUpdate",
+      "description": "Persistence Mechanism",
+      "confidence": "High"
+    }
+  ],
+  "processes": [
+    {
+      "type": "Process Name",
+      "value": "powershell.exe",
+      "description": "Malicious Execution",
+      "confidence": "Medium"
+    },
+    {
+      "type": "Command Line",
+      "value": "IEX(New-Object Net.WebClient).DownloadString",
+      "description": "PowerShell Download Pattern",
+      "confidence": "High"
+    },
+    {
+      "type": "PID",
+      "value": "4872",
+      "description": "Malicious PowerShell Process",
+      "confidence": "High"
+    },
+    {
+      "type": "PID",
+      "value": "7716",
+      "description": "Primary Malware Process",
+      "confidence": "High"
+    },
+    {
+      "type": "PID",
+      "value": "4012",
+      "description": "Secondary Malware Process",
+      "confidence": "High"
+    }
+  ],
+  "other": [
+    {
+      "type": "Victim ID",
+      "value": "21a34484",
+      "description": "Unique Victim Identifier",
+      "confidence": "High"
+    },
+    {
+      "type": "Encryption Key",
+      "value": "9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw=",
+      "description": "AES-256 Fernet Key",
+      "confidence": "Critical"
+    },
+    {
+      "type": "User-Agent",
+      "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "description": "Browser Fingerprint",
+      "confidence": "Low"
+    },
+    {
+      "type": "Hostname",
+      "value": "DESKTOP-7URDO6U",
+      "description": "Compromised System",
+      "confidence": "Medium"
+    },
+    {
+      "type": "Username",
+      "value": "Windows10",
+      "description": "Victim User Account",
+      "confidence": "Medium"
+    }
+  ]
+}
