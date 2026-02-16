@@ -19,7 +19,7 @@
 
 ---
 
-## 📋 Executive Summary
+## Executive Summary
 
 Advanced ransomware attack targeting a Windows 10 environment, resulting in encryption of 37 files using AES-256 (Fernet). The attack was delivered via social engineering (fake Facebook page) and included:
 
@@ -33,7 +33,7 @@ Advanced ransomware attack targeting a Windows 10 environment, resulting in encr
 
 ---
 
-## 🎯 Key Findings
+## Key Findings
 
 | Category | Finding |
 |----------|---------|
@@ -47,7 +47,7 @@ Advanced ransomware attack targeting a Windows 10 environment, resulting in encr
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 .
 ├── README.md                          # This file
@@ -76,43 +76,43 @@ Advanced ransomware attack targeting a Windows 10 environment, resulting in encr
 
 ---
 
-## 🔍 Investigation Phases
+## Investigation Phases
 
-### Phase 1: Evidence Acquisition ✅
+### Phase 1: Evidence Acquisition 
 - Memory dump acquisition (2.0GB)
 - Network traffic capture (PCAP)
 - Event log collection (Sysmon, Security, System)
 - Registry hive extraction
 - File system metadata
 
-### Phase 2: Network Forensics ✅
+### Phase 2: Network Forensics 
 - PCAP analysis (4,634 packets)
 - HTTP traffic reconstruction
 - C2 communication mapping
 - Timeline creation
 - IOC extraction
 
-### Phase 3: Memory Forensics ✅
+### Phase 3: Memory Forensics 
 - Process analysis (Volatility 3)
 - Network connection enumeration
 - DLL injection detection
 - Command line extraction
 - Code injection analysis
 
-### Phase 4: Log Analysis ✅
+### Phase 4: Log Analysis 
 - Sysmon event correlation
 - Security event review
 - Registry change tracking
 - File creation timeline
 - Process execution chain
 
-### Phase 5: Timeline Reconstruction ✅
+### Phase 5: Timeline Reconstruction 
 - Super timeline creation
 - Event correlation across sources
 - Attack sequence mapping
 - MITRE ATT&CK technique mapping
 
-### Phase 6: Reporting ✅
+### Phase 6: Reporting 
 - Technical findings documentation
 - IOC compilation
 - Remediation recommendations
@@ -120,7 +120,7 @@ Advanced ransomware attack targeting a Windows 10 environment, resulting in encr
 
 ---
 
-## 🛠️ Tools & Techniques
+## Tools & Techniques
 
 ### Forensic Tools
 
@@ -144,7 +144,7 @@ Advanced ransomware attack targeting a Windows 10 environment, resulting in encr
 
 ---
 
-## 📊 Attack Flow
+## Attack Flow
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                      ATTACK SEQUENCE                        │
@@ -188,7 +188,7 @@ Advanced ransomware attack targeting a Windows 10 environment, resulting in encr
 
 ---
 
-## 🔴 Indicators of Compromise (IOCs)
+## Indicators of Compromise (IOCs)
 
 ### Network
 ```
@@ -235,7 +235,7 @@ Encrypted: .locked
 
 ---
 
-## 🎯 MITRE ATT&CK Techniques
+## MITRE ATT&CK Techniques
 
 | Tactic | Technique ID | Technique Name | Evidence Location |
 |--------|--------------|----------------|-------------------|
@@ -259,7 +259,7 @@ Encrypted: .locked
 
 ---
 
-## 🔑 Critical Information
+## Critical Information
 
 **Encryption Key Location:**  
 `evidence/21a34484_key.txt`
@@ -269,11 +269,11 @@ Encrypted: .locked
 9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw=
 ```
 
-⚠️ This key is the **ONLY** way to decrypt the 37 encrypted files. It was exfiltrated to the C2 server during the attack and stored in `~/ransomware_c2/encryption_keys/21a34484_key.txt`.
+This key is the **ONLY** way to decrypt the 37 encrypted files. It was exfiltrated to the C2 server during the attack and stored in `~/ransomware_c2/encryption_keys/21a34484_key.txt`.
 
 ---
 
-## 🛡️ Recommendations
+## Recommendations
 
 ### Immediate Actions
 
@@ -332,7 +332,7 @@ alert http any any -> any any (msg:"Large Encoded Payload Download";
 
 ---
 
-## 📈 Lessons Learned
+## Lessons Learned
 
 ### What Worked
 
@@ -358,7 +358,7 @@ alert http any any -> any any (msg:"Large Encoded Payload Download";
 
 ---
 
-## 📚 References
+## References
 
 - [MITRE ATT&CK Framework](https://attack.mitre.org/)
 - [Volatility 3 Documentation](https://volatility3.readthedocs.io/)
@@ -367,7 +367,7 @@ alert http any any -> any any (msg:"Large Encoded Payload Download";
 
 ---
 
-## ⚖️ Legal Notice
+## Legal Notice
 
 **FOR EDUCATIONAL PURPOSES ONLY**
 
@@ -382,16 +382,16 @@ This documentation is shared for educational and training purposes only.
 
 ---
 
-## 👤 Author
+## Author
 
 **Forensic Analyst:** Jesse Antman  
 **GitHub:** https://github.com/yiantman-ai  
 **Email:** yi.Antman@gmail.com  
-**Repository:** [This Repository]
+**Repository:** https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
 
 ---
 
-## 📝 Project Status
+## Project Status
 
 - [x] Evidence acquisition complete
 - [x] Network forensics complete
