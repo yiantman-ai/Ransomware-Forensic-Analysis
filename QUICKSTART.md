@@ -52,7 +52,7 @@ cat analysis/iocs/iocs_full.csv
 
 ---
 
-## 📚 30-Minute Deep Dive
+## 30-Minute Deep Dive
 
 ### Phase 1: Understand the Attack (10 min)
 
@@ -147,7 +147,7 @@ cat analysis/iocs/iocs_full.csv
 
 ---
 
-## 🛠️ Using the Tools
+## Using the Tools
 
 ### Decryption Tool
 ```bash
@@ -175,7 +175,7 @@ python3 generate_stats.py
 
 ---
 
-## 📊 Key Files
+## Key Files
 
 | File | Description |
 |------|-------------|
