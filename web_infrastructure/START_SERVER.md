@@ -20,4 +20,4 @@ curl http://localhost:8080/config.dat
 
 ## Security Reminder
 
-⚠️ ONLY RUN IN ISOLATED LAB ENVIRONMENT
+ONLY RUN IN ISOLATED LAB ENVIRONMENT
