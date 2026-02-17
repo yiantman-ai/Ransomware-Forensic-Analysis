@@ -54,8 +54,8 @@ Recursive: True
 ...
 
 ======================================================================
-✅ Successfully decrypted: 37
-❌ Failed to decrypt: 0
+Successfully decrypted: 37
+Failed to decrypt: 0
 ======================================================================
 ```
 
