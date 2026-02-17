@@ -2,7 +2,7 @@
 
 Fast track to understanding this forensic investigation.
 
-## 📋 TL;DR
+## TL;DR
 
 **What happened:** Educational ransomware encrypted 37 files in 90 seconds via social engineering.
 
@@ -12,7 +12,7 @@ Fast track to understanding this forensic investigation.
 
 ---
 
-## 🚀 5-Minute Overview
+## 5-Minute Overview
 
 ### 1. Read the Executive Summary
 ```bash
@@ -189,7 +189,7 @@ python3 generate_stats.py
 
 ---
 
-## 🎯 Learning Paths
+## Learning Paths
 
 ### For Students
 
@@ -214,7 +214,7 @@ python3 generate_stats.py
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Q: Can I run the malware?**  
 A: Only in isolated lab environments. Educational purposes only.
@@ -230,7 +230,7 @@ A: Yes! That's exactly what it's designed for.
 
 ---
 
-## 📞 Support
+## Support
 
 - **Issues:** GitHub Issues
 - **Questions:** GitHub Discussions
@@ -238,4 +238,4 @@ A: Yes! That's exactly what it's designed for.
 
 ---
 
-**Happy Investigating! 🔍**
+**Happy Investigating! **
