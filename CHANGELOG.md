@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [1.0.0] - 2026-02-16
 
-### 🎉 Initial Release
+### Initial Release
 
 Complete forensic investigation of educational ransomware attack.
 
