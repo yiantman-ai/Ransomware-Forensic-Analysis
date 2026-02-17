@@ -107,7 +107,7 @@ cat analysis/iocs/iocs_full.csv
 
 ---
 
-## 🎓 Full Investigation (2+ hours)
+## Full Investigation (2+ hours)
 
 ### Day 1: Network Forensics
 
