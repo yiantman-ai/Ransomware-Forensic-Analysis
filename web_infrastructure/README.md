@@ -1,10 +1,10 @@
 # Web Infrastructure - Phishing & C2 Server
 
-**⚠️ WARNING: FOR EDUCATIONAL PURPOSES ONLY**
+** WARNING: FOR EDUCATIONAL PURPOSES ONLY**
 
 This directory contains the complete web infrastructure used in the ransomware attack simulation.
 
-## 📁 Contents
+## Contents
 
 ### 1. Phishing Website
 
@@ -24,7 +24,7 @@ This directory contains the complete web infrastructure used in the ransomware a
 - `POST /register` - Victim registration + encryption key
 - `POST /exfiltrate` - Encrypted file list
 
-## 🚀 Usage (Educational Lab Only)
+## Usage (Educational Lab Only)
 ```bash
 pip install flask
 python3 c2_server.py
@@ -32,18 +32,18 @@ python3 c2_server.py
 
 Server starts on: `http://0.0.0.0:8080`
 
-## ⚠️ Legal Notice
+## Legal Notice
 
 FOR AUTHORIZED SECURITY RESEARCH AND EDUCATION ONLY.
 
 **Permitted:**
-✅ Educational labs (isolated networks)
-✅ Security training
-✅ Red team exercises (with authorization)
+Educational labs (isolated networks)
+Security training
+Red team exercises (with authorization)
 
 **Prohibited:**
-❌ Deploying against real users
-❌ Any malicious activity
+Deploying against real users
+Any malicious activity
 
 **Maintainer:** Jesse Antman  
 **Repository:** https://github.com/yiantman-ai/Ransomware-Forensic-Analysis
