@@ -226,7 +226,7 @@ def main():
         
         print()
         print("=" * 70)
-        print("✅ All visualizations created successfully!")
+        print(" All visualizations created successfully!")
         print("=" * 70)
         
     except Exception as e:
