@@ -232,11 +232,11 @@ grep "EventID.*3" sysmon_parsed.json
 
 ### Verification Steps
 
-1. ✅ Evidence integrity verified (hashes match)
-2. ✅ Timeline correlation (all sources align)
-3. ✅ Peer review conducted
-4. ✅ Documentation complete
-5. ✅ Findings reproducible
+1. Evidence integrity verified (hashes match)
+2. Timeline correlation (all sources align)
+3. Peer review conducted
+4. Documentation complete
+5. Findings reproducible
 
 ### Validation Criteria
 
@@ -252,17 +252,17 @@ grep "EventID.*3" sysmon_parsed.json
 
 ### What Worked Well
 
-✅ Comprehensive logging (Sysmon)  
-✅ Quick memory acquisition  
-✅ Complete PCAP capture  
-✅ Multi-source correlation  
+Comprehensive logging (Sysmon)  
+Quick memory acquisition  
+Complete PCAP capture  
+Multi-source correlation  
 
 ### Areas for Improvement
 
-⚠️ Earlier detection (EDR needed)  
-⚠️ Automated response (SOAR)  
-⚠️ Better user training  
-⚠️ Enhanced monitoring  
+Earlier detection (EDR needed)  
+Automated response (SOAR)  
+Better user training  
+Enhanced monitoring  
 
 ---
 
