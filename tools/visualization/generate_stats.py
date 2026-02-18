@@ -36,7 +36,7 @@ def generate_report():
 ╚══════════════════════════════════════════════════════════════════╝
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📊 VICTIM INFORMATION
+   VICTIM INFORMATION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Victim ID:          {victim_info['victim_id']}
@@ -49,7 +49,7 @@ VM Detection:       {'Yes' if victim_info['is_vm'] else 'No'}
 Debugger:           {'Detected' if victim_info['is_debugged'] else 'Not Detected'}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-💾 ENCRYPTION IMPACT
+   ENCRYPTION IMPACT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Files Encrypted:    {file_data['count']} files
@@ -65,7 +65,7 @@ File Types:
   • JPG files:      4
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🔍 SYSMON ANALYSIS
+   SYSMON ANALYSIS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Total Events:       {sum(len(v) for v in sysmon_data.values())}
@@ -75,7 +75,7 @@ File Creates:       {len(sysmon_data['FileCreate'])}
 Registry Events:    {len(sysmon_data['RegistryEvent'])}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🌐 NETWORK ACTIVITY
+   NETWORK ACTIVITY
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 C2 Server:          192.168.74.147:8080
@@ -94,7 +94,7 @@ Exfiltration:
   • Browser data:   {len(victim_info.get('chrome_history', []))} history entries
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎯 MITRE ATT&CK COVERAGE
+   MITRE ATT&CK COVERAGE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Total Techniques:   25 techniques across 10 tactics
@@ -112,7 +112,7 @@ Tactics Breakdown:
   • Impact:               3 techniques
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🚨 INDICATORS OF COMPROMISE (IOCs)
+   INDICATORS OF COMPROMISE (IOCs)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Network IOCs:       7
@@ -122,7 +122,7 @@ Process IOCs:       5
 Total IOCs:         24
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⏱️ ATTACK TIMELINE
+   ATTACK TIMELINE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Initial Access:     12:49:38 UTC
@@ -133,7 +133,7 @@ Data Exfiltration:  12:51:06 UTC
 Total Duration:     90 seconds (download → exfiltration)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📁 EVIDENCE COLLECTED
+   EVIDENCE COLLECTED
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Memory Dump:        2.0 GB (SHA256 verified)
@@ -146,17 +146,17 @@ Registry Hives:     ~100 MB
 Total Evidence:     ~2.15 GB
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ INVESTIGATION STATUS
+   INVESTIGATION STATUS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Evidence Acquisition:   ✅ Complete
-Network Forensics:      ✅ Complete
-Memory Forensics:       ✅ Complete
-Log Analysis:           ✅ Complete
-Timeline Reconstruction:✅ Complete
-MITRE Mapping:          ✅ Complete
-IOC Extraction:         ✅ Complete
-Final Report:           ✅ Complete
+Evidence Acquisition:      Complete
+Network Forensics:         Complete
+Memory Forensics:          Complete
+Log Analysis:              Complete
+Timeline Reconstruction:   Complete
+MITRE Mapping:             Complete
+IOC Extraction:            Complete
+Final Report:              Complete
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║                    INVESTIGATION COMPLETE                        ║
