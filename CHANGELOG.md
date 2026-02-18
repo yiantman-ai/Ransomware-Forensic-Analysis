@@ -23,7 +23,7 @@ Complete forensic investigation of educational ransomware attack.
 #### Reports
 - Network Forensics Analysis (Phase 2)
 - Memory Forensics Analysis (Phase 3)
-- Final Investigation Report (50+ pages)
+- Final Investigation Report 
 - MITRE ATT&CK mapping (25 techniques)
 
 #### Evidence
