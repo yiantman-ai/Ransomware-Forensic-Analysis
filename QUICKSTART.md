@@ -109,7 +109,7 @@ cat analysis/iocs/iocs_full.csv
 
 ## Full Investigation (2+ hours)
 
-### Day 1: Network Forensics
+### 1: Network Forensics
 
 1. Open Wireshark with PCAP
 2. Follow TCP streams
@@ -118,7 +118,7 @@ cat analysis/iocs/iocs_full.csv
 
 **Guide:** `reports/01_Network_Forensics.md`
 
-### Day 2: Memory Forensics
+### 2: Memory Forensics
 
 1. Install Volatility 3
 2. Run process analysis
@@ -127,7 +127,7 @@ cat analysis/iocs/iocs_full.csv
 
 **Guide:** `reports/02_Memory_Forensics.md`
 
-### Day 3: Log Analysis
+### 3: Log Analysis
 
 1. Parse Sysmon events
 2. Correlate with memory
@@ -136,7 +136,7 @@ cat analysis/iocs/iocs_full.csv
 
 **Guide:** `analysis/logs/sysmon_summary.txt`
 
-### Day 4: Synthesis
+### 4: Synthesis
 
 1. Create super timeline
 2. Map to MITRE ATT&CK
@@ -180,7 +180,7 @@ python3 generate_stats.py
 | File | Description |
 |------|-------------|
 | `README.md` | Project overview |
-| `reports/05_Final_Report.md` | Complete analysis (50+ pages) |
+| `reports/05_Final_Report.md` | Complete analysis |
 | `analysis/timeline/attack_flow.txt` | Visual attack flow |
 | `evidence/21a34484_key.txt` | Encryption key (CRITICAL) |
 | `analysis/iocs/iocs_full.csv` | All IOCs |
