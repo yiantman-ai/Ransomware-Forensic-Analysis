@@ -35,9 +35,9 @@ KEY FINDINGS:
    12:51:07 - File list exfiltration
 
 EVIDENCE CORRELATION:
-✅ Memory forensics: Confirmed PIDs 7716, 4012, 4872
-✅ PCAP analysis: Confirmed C2 traffic timestamps
-✅ Sysmon logs: Complete execution chain documented
+Memory forensics: Confirmed PIDs 7716, 4012, 4872
+PCAP analysis: Confirmed C2 traffic timestamps
+Sysmon logs: Complete execution chain documented
 
 IOCs IDENTIFIED:
 - Parent command: loader.ps1 download via PowerShell
