@@ -138,7 +138,7 @@ This investigation follows the NIST Cybersecurity Framework and SANS DFIR method
 - Recommendations development
 
 **Deliverables:**
-- Final report (50+ pages)
+- Final report 
 - Executive summary
 - Timeline visualizations
 - Detection rules
