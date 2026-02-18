@@ -12,10 +12,10 @@ Complete inventory of forensic evidence collected during investigation.
 
 | Item | Collected | Hash (SHA256) | Location | Status |
 |------|-----------|---------------|----------|--------|
-| Memory Dump | 2026-02-15 14:10:04 | bbddae76c5d688f8325eb5227bc259e87033e8233aeb032291f8e01f80e72079 | External storage | ✅ Verified |
-| PCAP | 2026-02-15 12:48-12:54 | 174d6a5d08dcabb1295002fb99fcac68fcab47064c40e0ca6943c9ef3661338e | pcap/attack_full.pcap | ✅ Verified |
-| Sysmon Log | 2026-02-15 15:42 | N/A | Extracted | ✅ Verified |
-| C2 Logs | 2026-02-15 12:50-12:51 | N/A | logs/ | ✅ Verified |
+| Memory Dump | 2026-02-15 14:10:04 | bbddae76c5d688f8325eb5227bc259e87033e8233aeb032291f8e01f80e72079 | External storage | Verified |
+| PCAP | 2026-02-15 12:48-12:54 | 174d6a5d08dcabb1295002fb99fcac68fcab47064c40e0ca6943c9ef3661338e | pcap/attack_full.pcap | Verified |
+| Sysmon Log | 2026-02-15 15:42 | N/A | Extracted | Verified |
+| C2 Logs | 2026-02-15 12:50-12:51 | N/A | logs/ | Verified |
 
 ---
 
